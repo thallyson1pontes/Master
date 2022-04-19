@@ -1,6 +1,6 @@
 package io.application.controller;
 
-import io.application.model.response.Extrato;
+import io.application.domain.response.Extrato;
 import io.application.api.ExtratoApi;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;

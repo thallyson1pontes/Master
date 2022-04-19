@@ -5,8 +5,9 @@
  */
 package io.application.api;
 
-import io.application.model.response.Extrato;
+import io.application.domain.response.Extrato;
 import io.swagger.annotations.*;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,6 +34,6 @@ public interface ExtratoApi {
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.GET)
-    ResponseEntity<Extrato> consultaExtrato(@ApiParam(value = "",required=true) @PathVariable("agencia") Integer agencia,@ApiParam(value = "",required=true) @PathVariable("numero") Long numero,@ApiParam(value = "",required=true) @PathVariable("digito") Integer digito,@ApiParam(value = "" ,required=true) @RequestHeader(value="Authorization", required=true) String authorization);
+    ResponseEntity<Extrato> consultaExtrato(@ApiParam(value = "",required=true) @PathVariable("agencia") Integer agencia, @ApiParam(value = "",required=true) @PathVariable("numero") Long numero, @ApiParam(value = "",required=true) @PathVariable("digito") Integer digito, @ApiParam(value = "" ,required=true) @RequestHeader(value="Authorization", required=true) String authorization);
 
 }
